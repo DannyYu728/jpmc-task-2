@@ -3,18 +3,11 @@ import { Table } from '@finos/perspective';
 import { ServerRespond } from './DataStreamer';
 import './Graph.css';
 
-/**
- * Props declaration for <Graph />
- */
 interface IProps {
   data: ServerRespond[],
 }
 
-/**
- * Perspective library adds load to HTMLElement prototype.
- * This interface acts as a wrapper for Typescript compiler.
- */
-interface PerspectiveViewerElement {
+interface PerspectiveViewerElement extends HTMLElement {
   load: (table: Table) => void,
 }
 
